@@ -23,9 +23,11 @@ const applicationHTML = `
 </article>
 
 <article class="assignments">
+    <section>
     <h2>Current Assignments</h2>
     ${Assignments()}
-</article>
+    </section>
+    </article>
 `
 
 mainContainer.innerHTML = applicationHTML
