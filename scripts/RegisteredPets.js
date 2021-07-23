@@ -16,14 +16,14 @@ document.addEventListener(
                     let assignedWalker = { name: "" };
 
                     for (const walker of walkers) {
-                        if (walker.city === parseInt(walkerId)) {
-                            const assignedWalker = pets.filter((walker) => {
-                                if (walker.id === walkerID)
-                                return true
+                        if (walker.id === pet.walkerId) {
+                            assignedWalker = pets.filter((walker) => {
+                                if (pet.walkerId === walker.id)
+                                    return true
                             })
                         }
                     }
-                    window.alert(`${pet.name} is being walked by ${assignedWalker.name}`)
+                    window.alert(`${pet.name} is being walked by ${assignedWalker[0].name} `)
                 }
             }
         }
@@ -37,6 +37,8 @@ export const RegisteredPets = () => {
     for (const pet of pets) {
         petHTML += `<li id="pet--${pet.id}">${pet.name}</li>`
     }
+
+
 
     petHTML += "</ul>"
 
