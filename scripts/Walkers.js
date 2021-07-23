@@ -30,7 +30,8 @@ export const Walkers = () => {
 
         
         
-    }
+    } 
+
     return walkerHTML 
     
 
